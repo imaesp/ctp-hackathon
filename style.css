@@ -1,0 +1,7 @@
+.carousel-item {
+    display: flex;
+  }
+  
+  .carousel-item .col {
+    padding: 0 5px;
+  }

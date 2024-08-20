@@ -10,35 +10,39 @@
 
   <nav>
     <ul>
-      <li class="nav-item">
-        <button data-switcher data-tab="1">BUDGET</button>
+      <li class="home_btn">
+        <button data-switcher data-tab="1">HOME</button>
       </li>
-      <li class="nav-item">
-        <button data-switcher data-tab="2">CHATBOT</button>
+      <li class="set_btn">
+        <button data-switcher data-tab="2">SETTINGS</button>
       </li>
-      <li class="nav-item ">
-        <button data-switcher data-tab="3">NEWS</button>
+      <li class="about_btn">
+        <button data-switcher data-tab="3">ABOUT</button>
       </li>
     </ul>
   </nav> 
 
-
-
-  <section class="budget">
-    <div class="page is-active" data-page="1">
-    </div>
+  <section class="pages">
+    <section class="page">
+      <div class="page is-active" data-page="1">
+        <h1>HOME</h1>
+      </div>
+    </section>
+  
+    <section class="page">
+      <div class="page" hidden data-page="2">
+        <h1>SETTINGS</h1>
+      </div>
+    </section>
+  
+  
+    <section class="page">
+      <div class="page" hidden data-page="3"> 
+        <h1>ABOUT</h1>
+      </div>
+    </section>
   </section>
-
-  <section class="chat">
-    <div class="page" data-page="2"> 
-    </div>
-  </section>
-
-
-  <section class="news">
-    <div class="page" data-page="3"> 
-    </div>
-  </section>
+  
 
   <script src="script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

@@ -31,11 +31,6 @@ window.addEventListener('load', () => {
 });
 
 
-
-
-
-
-
 const OPENROUTER_API_KEY = "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";
 
 const generateResponse = () => {

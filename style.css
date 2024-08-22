@@ -1,10 +1,193 @@
-.carousel-item {
-    display: flex;
-  }
-  
-  .carousel-item .col {
-    padding: 0 5px;
-  }
+header {
+  position: fixed;
+  border: 10px solid #882345;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #ebb700;
+  color: white;
+  z-index: 3;
+  width: 100%;
+  /* border-radius: 8px; */
+}
+
+.bc-logo img {
+  height: 100px;
+  text-align: center;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.header-menu {
+  /* margin-left: 25px; */
+}
+
+.header-menu a:link,
+.header-menu a:visited {
+  background-color: #d2c7c7;
+  color: black;
+  padding: 14px 25px;
+  /* text-align: left; */
+  text-decoration: none;
+  display: inline-block;
+}
+
+.header-menu a:hover,
+.header-menu a:active {
+  background-color: white;
+  opacity: 75%;
+}
+
+.bulldog-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Offsets the image by its own dimensions to truly center it */
+  padding: 10px;
+  /* border-radius: 8px; */
+  z-index: 1;
+  /* Lower z-index value sends it to the back */
+  background-color: transparent;
+  pointer-events: none;
+}
+
+.bulldog-container img {
+  width: 100%;
+  /* Adjust the width of the image relative to its container */
+  max-width: 400px;
+  height: auto;
+  opacity: 0.6;
+  /* Set transparency (0.0 is fully transparent, 1.0 is fully opaque) */
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding: 20px;
+  background-color: #882345;
+  /* Background color for the main section */
+  color: white;
+  z-index: 1;
+}
+
+.body-flex-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-top: 120px;
+  /* align-items: flex-start; */
+  justify-content: flex-start;
+}
+
+.sidebar-flex-container {
+  background-color: #ebb700;
+  flex: 1;
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  /* top: 35px; */
+  left: 10px;
+  padding-top: 10px;
+}
+
+.sidebar-flex-container h4 {
+  text-align: center;
+}
+
+.directory {
+  background-color: #d2c7c7;
+}
+
+.sidebar-flex-container a,
+.my-button {
+  color: #ebb700;
+  z-index: 1;
+  color: black;
+  padding: 6px 0px 6px 8px;
+  /* margin-top: 10px; */
+  text-decoration: none;
+  font-size: 15px;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.sidebar-flex-container a:hover,
+.my-button:hover {
+  color: #fff;
+}
+
+.active {
+  /* background-color: #882345; */
+  color: #fff;
+}
+
+.sidebar-dropdown {
+  background-color: #fff;
+  display: none;
+  padding-left: 8px;
+}
+
+.info-flex-container {
+  display: inline;
+  flex: 2;
+  margin-left: 200px;
+}
+
+.sub-section {
+  scroll-margin-top: 130px;
+  display: flex;
+  border: 5px solid #882345;
+}
+
+.first-child {
+  border-right: 0px;
+  flex: 3;
+}
+
+.second-child {
+  flex: 1;
+  border-left: 0px;
+}
+
+footer {
+  margin-left: 200px;
+  background-color: white;
+}
+
+.carousel {
+  z-index: 2;
+  position: relative;
+  background-color: white;
+  margin-top: 20px;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  /* Ensures images are arranged in a row */
+  flex-wrap: wrap;
+  /* Allows images to wrap to the next line if needed */
+  justify-content: center;
+  /* Optional: Centers the images horizontally */
+}
+
+.carousel img {
+  max-width: 375px;
+  /* max-height: 200px;  */
+  width: auto;
+  height: 150px;
+  object-fit: contain;
+  /* Ensures the entire image is visible*/
+  background-color: white;
+}
+
+/* Chatbot Styling */
 
 .chatbot-toggler{
   position: fixed;
@@ -49,6 +232,7 @@
   transform: scale(1);
   opacity: 1;
   pointer-events: auto;
+  z-index: 3;
 }
 .chatbot header{
   background: #882345;
@@ -82,7 +266,7 @@
   margin: 20px 0;
   justify-content: flex-end;
 }
-.chatbot .chat p {
+.chatbot .chat p{
   color: #fff;
   max-width: 75%;
   font-size: 0.95rem;

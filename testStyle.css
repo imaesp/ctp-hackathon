@@ -1,0 +1,75 @@
+
+.myDropdown{
+  position: relative;
+  display: inline-block;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #EBB700;
+    color: white;
+    z-index: 3;
+    border-radius: 8px;
+  
+}
+
+
+.header .BC-LOGO img {
+    height: 100px;
+    margin-right: 20px;
+
+}
+.bulldog-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Offsets the image by its own dimensions to truly center it */
+ 
+    padding: 10px;
+    border-radius: 8px;
+    z-index: 2; /* Lower z-index value sends it to the back */
+    background-color: transparent;
+}
+
+
+.bulldog-container img {
+    width: 100%; /* Adjust the width of the image relative to its container */
+    max-width: 400px; 
+    height: auto;
+   opacity: 0.6; /* Set transparency (0.0 is fully transparent, 1.0 is fully opaque) */
+
+}
+
+.page { 
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 20px;
+    background-color: #882345; /* Background color for the main section */
+    color: white;
+    z-index: 1;
+    
+    
+}
+.merged{
+   /* border-radius: 8px; /* This will round the corners of the carousel */
+
+}
+
+
+.directory {
+    background-color: #D2C7C7;
+    border-radius: 8px;
+    padding: 10px; 
+}
+.carousel {
+    z-index: 2;
+    position: relative;
+    background-color:#D2C7C7;
+    margin-top: 20px;
+    border-radius: 8px;
+    padding: 10px; 
+}

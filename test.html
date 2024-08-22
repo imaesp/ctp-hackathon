@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="testStyle.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Brooklyn college landing page -->
+    <section class = "page">
+        <div class="merged">
+            <div class="header">
+                <!-- ADD a logo for resource first -->
+                <p>RESOURCEfirst</p>
+
+                <div class="BC-LOGO"> <img src="assets/logo.png" alt="BC Logo">
+                </div>
+                <div class="dropdown"> 
+                    <form action="/action_page.php" method="get">
+                        <input list="browsers" name="browser" id="browser">
+                        <datalist id="browsers">
+                            <option value="Academic">
+                            <option value="Learning Center">
+                            <option value="Career Center">
+                            <option value="Social Services">
+                            <option value="Financial Aid">
+                            <option value="Counseling">
+                            <option value="Health Clinic"></option>
+                            <option value="Immunizations"></option>
+                            <option value="Food Pantry"></option>
+                            <option value="Women Center"></option>
+                            <option value="Disability"></option>
+                            <option value="Housing"></option>
+                            <option value="Contact"></option>
+                        </datalist>
+                        <input type="submit">
+                    </form>
+                </div>
+            </div>
+            <!-- End of header -->
+            
+            <div class = "directory">
+                <div class = "menu">Directory</div>
+                <div class = "academics">Academic
+                    <ul>
+                        <li><button>Academics</button></li>
+                        <li><button>Learning Center</button></li>
+                        <li><button>Career Center</button></li>
+                    </ul>
+                </div>
+                <div class = "finances">Financial
+                    <ul>
+                        <li><button>Social Services</button></li>
+                        <li><button>Financial Aid</button></li>
+                    </ul>
+                </div>
+                <div class = "health">Health and Nutrition
+                    <ul>
+                        <li><button>Counseling</button></li>
+                        <li><button>Health Clinic</button></li>
+                        <li><button>Immunizations</button></li>
+                        <li><button>Food Pantry</button></li>
+                    </ul>
+                </div>
+                <div class = "social-services">Social Services
+                    <ul>
+                        <li><button>Women Center</button></li>
+                        <li><button>Housing</button></li>
+                    </ul>
+                </div>
+                <div class = "disability">Disability Services
+                    <ul>
+                        <li><button>Add Info</button></li>     
+                    </ul>
+                </div>
+            </div>
+        </div>   
+        <!-- End of directory -->
+        <div class="bulldog-container">
+            <img src="assets/bulldog.png" alt="BC Bulldog Logo">
+        </div>
+        <!-- Carrousel Item -->
+        <div id="multiItemCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row">
+                <div class="col">
+                    <img src="assets\bc.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="col">
+                    <img src="assets\cct.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="col">
+                    <img src="assets\hunter.jpeg" class="d-block w-100" alt="...">
+                </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row">
+                <div class="col">
+                    <img src="assets\baruch.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="col">
+                    <img src="assets\ccny.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="col">
+                    <img src="assets\bmcc.jpg" class="d-block w-100" alt="...">
+                </div>
+                </div>
+            </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#multiItemCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#multiItemCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <!-- Carrousel Item -->
+        
+    </section>
+</body>
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap JS (with Popper.js) -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</html>

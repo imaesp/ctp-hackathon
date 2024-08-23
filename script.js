@@ -1,5 +1,4 @@
 window.addEventListener("load", () => {
-  //generateResponse();
   const test = document.querySelector(".bc-logo");
   const tab_switchers = document.querySelectorAll("[data-switcher]");
 
@@ -43,8 +42,9 @@ for (i = 0; i < dropdown.length; i++) {
 
 //meta-llama API call request
 const OPENROUTER_API_KEY = "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";
-const generateResponse = () => {
+const generateResponse = (incomingChatli) => {
     const API_url = "https://openrouter.ai/api/v1/chat/completions";
+    const messageElement = incomingChatli.querySelector("p");
 
     const requestOptions = {
         method: "POST",
@@ -54,12 +54,49 @@ const generateResponse = () => {
         },
         body: JSON.stringify({
             "model": "meta-llama/llama-3.1-8b-instruct:free",
-            "messages": [{"role": "user", "content": "Who is the current president of USA?"}]
+            "messages": [{"role": "user", "content": userMessage}]
         })
     }
     fetch(API_url, requestOptions).then(res => res.json()).then(data => {
-        console.log(data);
+        messageElement.textContent = data.choices[0].message.content;
     }).catch((error) => {
-        console.log(error);
-    })
+      messageElement.textContent = "Oops! Something went wrong. Please try again!" 
+    }).finally(() => chatBox.scrollTo(0, chatBox.scrollHeight));
 };
+
+const chatInput = document.querySelector(".chat-input textarea");
+const sendChatBtn = document.querySelector(".chat-input span");
+const chatBox = document.querySelector(".chatbox");
+const chatToggler = document.querySelector(".chatbot-toggler")
+
+let userMessage;
+
+const createChatli = (message, className) => {
+  const chatLi = document.createElement("li");
+  chatLi.classList.add("chat", className);
+  let chatContent = className === "outgoing" ? `<p>` : `<span class="material-symbols-outlined">smart_toy</span><p><p>`;
+  chatLi.innerHTML = chatContent;
+  chatLi.querySelector("p").textContent = message;
+  return chatLi;
+}
+
+
+const handleChat = () => {
+    userMessage = chatInput.value.trim();
+    if(!userMessage) return;
+    chatInput.value = "";
+
+    chatBox.appendChild(createChatli(userMessage, "outgoing"));
+    chatBox.scrollTo(0, chatBox.scrollHeight);
+
+    setTimeout(() => {
+      const incomingChatli = createChatli("Thinking....", "incoming")
+      chatBox.appendChild(incomingChatli);
+      chatBox.scrollTo(0, chatBox.scrollHeight);
+      generateResponse(incomingChatli);
+    }, 600)
+}
+
+chatToggler.addEventListener("click", () => document.getElementById("chatbot-con").classList.toggle("show-chatbot"))
+sendChatBtn.addEventListener("click", handleChat);
+

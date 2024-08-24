@@ -16,7 +16,7 @@ Installation and Setup
 To run RESOURCESfirst locally, follow these steps:
 
 Clone the repository:
-git clone https://github.com/your-username/RESOURCESfirst.git
+git clone https://github.com/imaesp/ctp-hackathon.git
 
 Navigate to the project directory:
 cd RESOURCESfirst

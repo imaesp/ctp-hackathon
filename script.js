@@ -64,10 +64,12 @@ const generateResponse = (incomingChatli) => {
     }).finally(() => chatBox.scrollTo(0, chatBox.scrollHeight));
 };
 
+//Chatbot messsage handling
 const chatInput = document.querySelector(".chat-input textarea");
 const sendChatBtn = document.querySelector(".chat-input span");
 const chatBox = document.querySelector(".chatbox");
-const chatToggler = document.querySelector(".chatbot-toggler")
+const chatToggler = document.querySelector(".chatbot-toggler");
+const chatBotCloseBtn = document.querySelector(".close-btn");
 
 let userMessage;
 
@@ -97,6 +99,18 @@ const handleChat = () => {
     }, 600)
 }
 
-chatToggler.addEventListener("click", () => document.getElementById("chatbot-con").classList.toggle("show-chatbot"))
+chatBotCloseBtn.addEventListener("click", () => document.getElementById("chatbot-con").classList.remove("show-chatbot"));
+chatToggler.addEventListener("click", () => document.getElementById("chatbot-con").classList.toggle("show-chatbot"));
 sendChatBtn.addEventListener("click", handleChat);
 
+//Animations 
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry => {
+    console.log(entry)
+    if(entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  }));
+});
+const subSectionElements = document.querySelectorAll(".sub-section");
+subSectionElements.forEach((el) => observer.observe(el));

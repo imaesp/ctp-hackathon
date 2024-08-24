@@ -258,6 +258,18 @@ footer {
   background-color: white;
 }
 
+.sub-section{
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+.show{
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
 /* Chatbot Styling */
 
 .chatbot-toggler{
@@ -275,7 +287,11 @@ footer {
   cursor: pointer;
   background: #d4d1d1;
   border-radius: 50%;
+  transition: all 0.2s ease;
   z-index: 3;
+}
+.show-chatbot .chatbot-toggler{
+  transform: rotate(90deg);
 }
 .chatbot-toggler span{
   position: absolute;
@@ -298,7 +314,9 @@ footer {
   overflow: hidden;
   background-color: aliceblue;
   border-radius: 15px;
+  transform-origin: bottom right;
   box-shadow: 0cqmax;
+  transition: all 0.1s ease;
 }
 .show-chatbot .chatbot{
   transform: scale(1);
